@@ -616,6 +616,7 @@ main .services .container a:hover {
 
 main .port {
     padding-top: 0px;
+    overflow-x: hidden;
 }
 
 main .port .portbg {
@@ -985,7 +986,11 @@ menu div:hover {
         margin: 10px 0;
     }
 
-    main .portfolio .container {
+    main .port {
+        overflow-x: unset;
+    }
+
+    main .port .container {
         overflow-x: hidden;
     }
 
