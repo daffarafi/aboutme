@@ -123,10 +123,6 @@ body {
     opacity: 70%;
 }
 
-nav {
-    width: 100%;
-}
-
 nav .container {
     position: fixed;
     top: 0;
@@ -155,6 +151,12 @@ nav .container .menu {
 nav .container .menu.active {
     background-color: white;
     transition: 0.3s;
+}
+
+nav,
+.bottom {
+    position: absolute;
+    z-index: 9;
 }
 
 nav .container .menu a {
@@ -452,31 +454,67 @@ main .about .aboutbg {
 
 main .about .aboutbg .b1 {
     position: absolute;
-    opacity: 10%;
-    top: -50px;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: hidden;
+}
+
+main .about .aboutbg .b1 img {
+    position: relative;
+    top: -200px;
     left: -200px;
-    transform: scale(1.5) rotate(40deg);
+    transform: rotate(50deg);
+    opacity: 20%;
 }
 main .about .aboutbg .b2 {
     position: absolute;
-    opacity: 10%;
-    top: -50px;
-    left: -200px;
-    transform: scale(1.5) rotate(20deg);
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: hidden;
 }
+
+main .about .aboutbg .b2 img {
+    position: relative;
+    top: -200px;
+
+    left: -200px;
+    transform: rotate(50deg);
+    opacity: 20%;
+}
+
 main .about .aboutbg .b3 {
     position: absolute;
-    opacity: 40%;
-    transform: rotate(45deg);
-    bottom: -220px;
-    right: -160px;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow-x: hidden;
+}
+
+main .about .aboutbg .b3 img {
+    position: relative;
+    right: -200px;
 }
 main .about .aboutbg .b4 {
     position: absolute;
-    opacity: 60%;
-    transform: rotate(-45deg);
-    bottom: -220px;
-    right: -160px;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow-x: hidden;
+}
+
+main .about .aboutbg .b4 img {
+    position: relative;
+    right: -200px;
 }
 
 main .about .container {
@@ -529,13 +567,18 @@ main .services {
     padding: 0;
 }
 main .services .servbg {
+    width: 100%;
+    height: 100%;
     position: absolute;
     z-index: -1;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main .services .servbg img {
     position: absolute;
-    transform: translate(-50%, -50%);
 }
 
 main .services .container {
@@ -585,41 +628,75 @@ main .port .portbg {
 
 main .port .portbg .b1 {
     position: absolute;
-    opacity: 10%;
-    transform: rotate(60deg) scale(0.8);
-    top: -100px;
-    left: -200px;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: hidden;
 }
+
+main .port .portbg .b1 img {
+    position: relative;
+    top: -150px;
+    left: -200px;
+    transform: rotate(60deg) scale(0.8);
+    opacity: 20%;
+}
+
 main .port .portbg .b2 {
     position: absolute;
-    opacity: 40%;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: hidden;
+}
+
+main .port .portbg .b2 img {
+    position: relative;
+    top: -150px;
+    left: -200px;
     transform: rotate(60deg);
-    top: -100px;
-    left: -200px;
-}
-main .port .portbg .b3 {
-    position: absolute;
     opacity: 60%;
-    transform: rotate(45deg) scale(1.1);
-    top: -100px;
-    left: -200px;
 }
+
 main .port .portbg .b4 {
     position: absolute;
-    opacity: 10%;
-    bottom: -200px;
-    right: -160px;
-    transform: scale(1.5) rotate(45deg);
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    overflow-x: hidden;
 }
+
+main .port .portbg .b4 img {
+    position: relative;
+    top: -200px;
+    right: -200px;
+    transform: rotate(80deg);
+    opacity: 20%;
+}
+
 main .port .portbg .b5 {
     position: absolute;
+    width: 100%;
+    height: 1000px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+main .port .portbg .b5 img {
+    position: relative;
     opacity: 60%;
-    bottom: -200px;
-    right: -160px;
-    transform: scale(1.3) rotate(25deg);
 }
 
 main .port .container {
+    max-width: 1250px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -718,14 +795,18 @@ main .contact {
 }
 
 main .contact .contbg {
+    width: 100%;
+    height: 100%;
     position: absolute;
     z-index: -1;
-    overflow: hidden;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main .contact .contbg img {
     position: absolute;
-    transform: translate(-50%, -50%);
 }
 
 main .contact .contbg img:nth-child(1),
@@ -869,6 +950,10 @@ menu div:hover {
         padding: 0 40px;
     }
 
+    main .about .container {
+        margin: 150px 0;
+    }
+
     main .services h1 {
         font-size: 45px;
     }
@@ -898,6 +983,10 @@ menu div:hover {
 
     main .contact .container .link a {
         margin: 10px 0;
+    }
+
+    main .portfolio .container {
+        overflow-x: hidden;
     }
 
     .bottom .container {
@@ -984,6 +1073,12 @@ menu div:hover {
     .bottom .container .port.active {
         transform: translateY(200%) scale(0);
         transition: 0.7s 1s;
+    }
+    main .about h3 {
+        font-size: 1.2em;
+    }
+    main .about p {
+        font-size: 0.9em;
     }
 }
 
