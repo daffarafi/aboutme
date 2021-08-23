@@ -974,6 +974,10 @@ menu div:hover {
         height: auto;
     }
 
+    main .contact .container h1 {
+        margin-bottom: 10px;
+    }
+
     main .contact .container .link {
         flex-direction: column;
     }
