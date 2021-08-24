@@ -464,7 +464,6 @@ main .about .aboutbg .b1 {
 
 main .about .aboutbg .b1 img {
     position: relative;
-    top: -200px;
     left: -200px;
     transform: rotate(50deg);
     opacity: 20%;
@@ -481,7 +480,6 @@ main .about .aboutbg .b2 {
 
 main .about .aboutbg .b2 img {
     position: relative;
-    top: -200px;
 
     left: -200px;
     transform: rotate(50deg);
